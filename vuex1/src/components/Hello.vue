@@ -36,7 +36,7 @@ export default {
         countSquare () {
             return this.$store.getters.countSquare;
         },
-        inputContent: {
+        inputContent: {//改变参数需要通过设置get和set方法进行更新和修改
             get () {
                 return this.$store.state.inputContent;
             },
@@ -75,10 +75,10 @@ export default {
             this.$store.commit('incrementNum',num);
         },
         reset:function () {
-            this.$store.commit('reset')
+            this.$store.commit('reset')//commit方法用来调用mutations方法，mutations方法不可以异步执行
         },
         clickAction:function () {
-            this.$store.dispatch('testAction');
+            this.$store.dispatch('testAction');//dispatch方法调用action,支持异步回调，当action返回promise函数时，可以通过.then执行下一步
         }
 
     }

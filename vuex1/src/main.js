@@ -35,7 +35,7 @@ const store = new Vuex.Store({
         }
     },
     actions: {
-        testAction (context) {
+        testAction (context) {//返回的为异步promise函数
             setTimeout(function(){context.commit('increment')},1000);
         }
     }
