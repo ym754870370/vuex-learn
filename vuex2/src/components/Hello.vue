@@ -45,8 +45,8 @@ export default {
             doneTodosCount: 'todosModule/doneTodosCount',
             countSquare: 'countModule/countSquare'
         })
-        
-    }, 
+
+    },
     methods: {
         /*...mapMutations([
             'countModule.increment',
